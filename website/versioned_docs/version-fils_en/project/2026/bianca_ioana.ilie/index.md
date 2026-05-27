@@ -47,6 +47,7 @@ The Power Management System
 This isolates the raw battery from the sensitive microcontroller to ensure safe operation.
 
 - Batteries: 
+
 The raw, mobile energy source for the cube. 3 AA batteries connected in series which will send 4.5V to the Microcontroller.
 
 The External Network
@@ -65,11 +66,15 @@ After my project was approved, I finalized the component list. Initially I was u
 
 The KiCAD schematic is completed, featuring an upgraded design with dual 74HC595 shift registers. Both the code and the physical assembly development are currently underway. Furthermore, I've started taking the necessary measurements for the 3D modeling of the cube's exterior design. 
 
+<<<<<<< HEAD
 ### Week 14 - 25 May
 
 I came up with the idea to use the rgbled for the signaling the wifi connection. It's a small detail that cannot be identified without knowing the meaning behind it. It lights blue if the quote is from the ZenQuotes website, and green if it's from the default, predefined ones. Furthermore, the light sensor helps the display adapt it's contrast, depending on the ambiental lighting.
 
 In the end, I've finished the software part and printed the cube.
+=======
+### Week 19 - 25 May
+>>>>>>> upstream/main
 
 ## Hardware
 
@@ -77,8 +82,11 @@ In the end, I've finished the software part and printed the cube.
 
 The hardware setup centers around a Raspberry Pi Pico 2W, which serves as the main controller and handles Wi-Fi connectivity. It is connected to a LIS3DH motion sensor and a BH1750 digital light sensor. The motion sensor sends hardware interrupts to the Pico, waking it from default state when a physical shake higher than a certain value is detected. For visual feedback, 5mm clear blue and white LEDs are connected, pulsing to simulate a "thinking" state while the system connects to the internet to fetch a quote.
 
+<<<<<<< HEAD
 To display the output, an OLED screen is wired to the Pico 2W. The OLED display, along with the motion and light sensors, communicate with the microcontroller. The system uses the ambient lux data from the BH1750 to dynamically adjust the OLED's display contrast mode based on the room's current lighting conditions.
 
+=======
+>>>>>>> upstream/main
 Because the cube is a standalone IoT device, it is powered by batteries rather than a constant USB connection.
 
 ### Schematics
@@ -93,7 +101,11 @@ Because the cube is a standalone IoT device, it is powered by batteries rather t
 | [LIS3DH Breakout](https://www.optimusdigital.ro/en/inertial-sensors/5655-lis3dh-triaxial-accelerometer-module.html) | Motion sensor for wake-up interrupts | 30 RON |
 | [BH1750 Digital Light Sensor](https://www.optimusdigital.ro/en/sensors-light/bh1750-digital-light-sensor.html) | Ambient light sensing for display mode | 13 RON |
 | [0.96" SSD1306 (128x64) I2C](https://www.optimusdigital.ro/en/displays-oled/096-oled-display.html) | Displaying the quotes | 20 RON |
+<<<<<<< HEAD
 | 5mm Clear Blue & White LEDs | Visual "thinking" feedback | 5 RON |
+=======
+| 5mm Clear Blue & Purple LEDs | Visual "thinking" feedback | 5 RON |
+>>>>>>> upstream/main
 | 3xAA Alcaline Batteries | Mobile power supply | 20 RON |
 | 74HC595 | IC | 5 RON |
 | Resistors (220 ohm), Wires, Breadboard | Basic electronic prototyping | 30 RON |
@@ -116,4 +128,7 @@ Because the cube is a standalone IoT device, it is powered by batteries rather t
 2. [Embassy Framework Documentation](https://embassy.dev/)
 3. [Raspberry Pi Pico W Rust Guide](https://reltech.substack.com/p/getting-started-with-rust-on-a-raspberry)
 4. [Guide to Embedded Rust Programming on Raspberry Pi Pico 2 (RP2350)](https://pico.implrust.com/pico2-pinout.html)
+<<<<<<< HEAD
 5. [Picotool](https://github.com/raspberrypi/pico-sdk-tools/releases)
+=======
+>>>>>>> upstream/main
